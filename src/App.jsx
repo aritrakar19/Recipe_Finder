@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import SearchBar from "./components/SearchBar";
 import RecipeList from "./components/RecipeList";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [recipes, setRecipes] = useState([]);
@@ -24,7 +25,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
       <div className="container mx-auto py-8">
         <SearchBar onSearch={fetchRecipes} />
@@ -34,9 +35,7 @@ const App = () => {
           <RecipeList recipes={recipes} />
         )}
       </div>
-      <footer className="bg-gray-800 text-white py-4 text-center">
-        <p>© 2024 Food Recipe Finder. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
