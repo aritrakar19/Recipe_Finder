@@ -15,7 +15,7 @@ const SearchBar = ({ onSearch }) => {
       <div style={styles.container}>
         <input
           type="text"
-          placeholder="Search for restaurants, dishes, or cuisines..."
+          placeholder="Search for dishes"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           style={styles.input}
@@ -58,7 +58,7 @@ const styles = {
   },
   input: {
     flex: 1,
-    padding: "12px 15px",
+    padding: "8px",
     border: "none",
     outline: "none",
     fontSize: "16px",
