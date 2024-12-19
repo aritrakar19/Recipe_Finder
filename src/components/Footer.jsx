@@ -11,14 +11,6 @@ const Footer = () => {
             Discover delicious recipes from around the world and bring your cooking skills to the next level with Food Recipe Finder.
           </p>
         </div>
-        {/* <div style={styles.column}>
-          <h4 style={styles.columnTitle}>Quick Links</h4>
-          <ul style={styles.linksList}>
-            <li style={styles.linkItem}><a href="/" style={styles.link}>Home</a></li>
-            <li style={styles.linkItem}><a href="/about" style={styles.link}>About</a></li>
-            <li style={styles.linkItem}><a href="/contact" style={styles.link}>Contact</a></li>
-          </ul>
-        </div> */}
         <div style={styles.column}>
           <h4 style={styles.columnTitle}>Follow Us</h4>
           <div style={styles.socialIcons}>
@@ -54,6 +46,7 @@ const styles = {
   },
   topSection: {
     display: "flex",
+    flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "flex-start",
     flexWrap: "wrap",
@@ -63,7 +56,7 @@ const styles = {
   column: {
     flex: "1 1 300px",
     margin: "10px",
-    textAlign: "left",
+    textAlign: "center", // Default for smaller screens
   },
   columnTitle: {
     fontSize: "18px",
@@ -74,35 +67,15 @@ const styles = {
     fontSize: "14px",
     lineHeight: "1.5",
   },
-  linksList: {
-    listStyle: "none",
-    padding: "0",
-    margin: "0",
-  },
-  linkItem: {
-    marginBottom: "5px",
-  },
-  link: {
-    color: "white",
-    textDecoration: "none",
-    fontSize: "14px",
-    transition: "color 0.3s",
-  },
-  linkHover: {
-    color: "#ff5757",
-  },
   socialIcons: {
     display: "flex",
-    gap: "10px",
     justifyContent: "center",
+    gap: "10px",
   },
   icon: {
     color: "white",
     fontSize: "20px",
     transition: "color 0.3s",
-  },
-  iconHover: {
-    color: "#ff5757",
   },
   bottomSection: {
     marginTop: "20px",
@@ -110,6 +83,22 @@ const styles = {
   copyText: {
     fontSize: "14px",
     color: "#aaa",
+  },
+};
+
+// Add media query logic
+const responsiveStyles = {
+  footer: {
+    ...styles.footer,
+    padding: window.innerWidth < 768 ? "10px" : "20px 0",
+  },
+  topSection: {
+    ...styles.topSection,
+    flexDirection: window.innerWidth < 768 ? "column" : "row",
+  },
+  column: {
+    ...styles.column,
+    textAlign: window.innerWidth < 768 ? "center" : "left",
   },
 };
 
