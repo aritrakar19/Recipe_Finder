@@ -4,7 +4,6 @@ import HeroSection from "./components/HeroSection";
 import SearchBar from "./components/SearchBar";
 import RecipeList from "./components/RecipeList";
 import Footer from "./components/Footer";
-import "./App.css";
 
 const App = () => {
   const [recipes, setRecipes] = useState([]);

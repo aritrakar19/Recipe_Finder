@@ -40,28 +40,3 @@
 .read-the-docs {
   color: #888;
 }
-/* App Container */
-.app-container {
-  width: auto; /* Adjusts width based on content */
-  min-height: 100vh; /* Ensures full screen height */
-  background-color: #f8f9fa; /* Light gray background */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center contents horizontally */
-}
-
-/* Content Section */
-.content {
-  width: auto;
-  margin: 0 auto;
-  padding: 1rem;
-  max-width: 1200px; /* Optional: To limit the maximum width */
-}
-
-/* Loading Text */
-.loading {
-  text-align: center;
-  color: gray;
-  margin-top: 2rem;
-  font-size: 1.2rem;
-}
