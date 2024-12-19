@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <div style={styles.hero}>
       <div style={styles.overlay}>
-        {/* <h1 style={styles.title}>Find the perfect recipe</h1> */}
+        <h1 style={styles.title}>Find the perfect recipe</h1>
         {/* <p style={styles.subtitle}>Find the perfect recipe for any occasion.</p> */}
       </div>
     </div>

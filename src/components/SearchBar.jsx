@@ -46,6 +46,7 @@ const styles = {
   },
   container: {
     display: "flex",
+    flexDirection: "row",
     alignItems: "center",
     backgroundColor: "white",
     borderRadius: "25px",
@@ -81,33 +82,20 @@ const styles = {
   icon: {
     marginRight: "8px",
   },
-  // Responsive styles for tablets and smaller screens
-  "@media (max-width: 768px)": {
+  // Media query styles using JavaScript conditions
+  responsiveStyles: {
     container: {
-      width: "90%",
-      flexDirection: "column",
+      flexDirection: window.innerWidth <= 768 ? "column" : "row",
+      width: window.innerWidth <= 480 ? "95%" : window.innerWidth <= 768 ? "90%" : "80%",
     },
     input: {
-      padding: "10px",
-      fontSize: "14px",
+      padding: window.innerWidth <= 480 ? "8px" : window.innerWidth <= 768 ? "10px" : "12px",
+      fontSize: window.innerWidth <= 480 ? "12px" : window.innerWidth <= 768 ? "14px" : "16px",
     },
     button: {
-      padding: "10px",
-      fontSize: "12px",
-      marginTop: "10px",
-    },
-  },
-  "@media (max-width: 480px)": {
-    container: {
-      width: "95%",
-    },
-    input: {
-      padding: "8px",
-      fontSize: "12px",
-    },
-    button: {
-      padding: "8px",
-      fontSize: "12px",
+      padding: window.innerWidth <= 480 ? "8px" : window.innerWidth <= 768 ? "10px" : "12px",
+      fontSize: window.innerWidth <= 480 ? "12px" : window.innerWidth <= 768 ? "14px" : "14px",
+      marginTop: window.innerWidth <= 768 ? "10px" : "0",
     },
   },
 };
