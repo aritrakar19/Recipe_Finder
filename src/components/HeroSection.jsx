@@ -32,6 +32,7 @@ const styles = {
     fontSize: "32px",
     fontWeight: "bold",
     margin: 0,
+    width: 218,
   },
   subtitle: {
     color: "#ddd",

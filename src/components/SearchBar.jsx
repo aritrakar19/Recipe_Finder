@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState("");
@@ -29,7 +30,7 @@ const SearchBar = ({ onSearch }) => {
             (e.target.style.backgroundColor = styles.button.backgroundColor)
           }
         >
-          <i className="fas fa-search" style={styles.icon}></i> Search
+          <i className="fas fa-search" style={styles.icon}></i>
         </button>
       </div>
     </div>
@@ -69,7 +70,7 @@ const styles = {
     justifyContent: "center",
     backgroundColor: "#ff5757",
     color: "white",
-    padding: "12px 20px",
+    padding: "15px 22px",
     border: "none",
     cursor: "pointer",
     fontSize: "14px",
@@ -79,9 +80,9 @@ const styles = {
   buttonHover: {
     backgroundColor: "#e04c4c",
   },
-  icon: {
-    marginRight: "8px",
-  },
+  // icon: {
+  //   marginRight: "8px",
+  // },
   // Media query styles using JavaScript conditions
   responsiveStyles: {
     container: {
